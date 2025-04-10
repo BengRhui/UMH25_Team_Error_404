@@ -28,19 +28,42 @@ Our conceptual diagram is as shown:
 The PDF Version of the diagram can be retrieved here: [Conceptual Diagram.pdf](https://github.com/user-attachments/files/19682125/Arc.Diagram.pdf)
 
 The diagram can be divided into three parts:
-- [Input](#Input)
-- backtest library
-- output
+- Input
+- Backtest Library
+- Output
 
 The explanation for each part is detailed in the following section.
 
 ---
 
 ## Input
-ABC
+To use the backtest library, we will need to provide a few inputs, including:
+- **Trading Data**<br>
+  *Dataset that will be used for backtesting. This dataset can be retrieved from various sources (e.g. CryptoQuant, Glassnode, Coinglass) via API calls.*
+  <br>
+  
+- **Timeframe**<br>
+  *Continue here later! Go makan first >.<*
+  <br>
+  
+- **Requirements**<br>
+  *ABC*
+  <br>
+  
+- **Strategies**<br>
+  *ABC*
+  <br>
+
+- **Trained Model**<br>
+  *ABC*
+  <br>
 
 ## Backtest Library
 ABC
 
 ## Output
 ABC
+
+---
+
+## Pre-trained Model
