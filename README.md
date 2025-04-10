@@ -23,7 +23,7 @@ Attached is the problem and objective statement for Domain 2 for reference if ne
 ## Assumptions
 For this project, our team has outlined a few assumptions to offer clarify on minor details:
 
-- It is assumed that there is no entry-error from the datasets obtained. All data accurately reflects the actual market movement at their respective timestamps.
+- It is assumed that the datasets obtained do not contain any entry errors (e.g. incorrect values or outliers). All data accurately reflects the actual market movement at their respective timestamps.
 
 - It is assumed that the risk-free rate used in the calculation of the Sharpe ratio is 0% (with reference to `InvestmentAsleep8365` from [Reddit](https://www.reddit.com/r/quant/comments/1fvbhle/what_risk_free_rate_should_i_use_to_calculate/)).
 
@@ -42,6 +42,11 @@ The diagram can be divided into three parts:
 - Output
 
 The explanation for each part is detailed in the following section.
+
+Also, throughout our implementation, our team will be using various external libraries. The potential libraries to be used include:
+- `pandas` (for data preprocessing)
+- `backtrader` (for backtest trading simulation)
+- `sklearn` (for machine learning)
 
 ---
 
@@ -101,7 +106,7 @@ The backtest library consists of four components, as detailed:
     - *Perform and record all the transactions that has been taken place*
     - *Might consider using parallel processing techniques to potentially improve execution speed*
   - *Then, apply the strategy on the forward-testing data*
-    - *Similar to what is done on the backtest data, perform and record all transactions*
+    - *Similar to what is done on the backtest data, perform and record all transactions*<br>
 
   
 - **Performance Evaluation**<br>
@@ -162,8 +167,8 @@ Some of the approaches / techniques considered include using:
 >
 > 
 > The purpose behind this is that, in the backtest library:
-> - `model 1` can first be applied to predict the market regime that might take place.
-> - Followed by `model 2` to predict the trend for each specific regime.
+> - `model 1` can first be applied to predict the market regime that might take place (whether if it's bull, bear or neutral market).
+> - Followed by `model 2` to predict the trend for each specific regime (the fluctuations, i.e. the ups and downs of the market).
 
 ### Step 4a: Train model on market regime prediction
 With the regimes labelled, we will start to train our model to predict market regime based on previous data. The steps involved include:
