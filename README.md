@@ -43,19 +43,23 @@ To use the backtest library, we will need to provide a few inputs, including:
   <br>
   
 - **Timeframe**<br>
-  *Continue here later! Go makan first >.<*
+  *Act as a filter to include only the records within the specific timeframe for backtesting (e.g. given a dataset from year 2000 to 2024, we can set the timeframe as 2020 to 2024 to only include data within the year range).*
   <br>
   
 - **Requirements**<br>
-  *ABC*
+  *Additional requirements that should be taken into consideration while performing backtesting (e.g. trading fees of 0.06%).*
   <br>
   
 - **Strategies**<br>
-  *ABC*
-  <br>
+  *The strategy that will be used to perform backtesting. An example would be:*
+  >*BUY when flow_total > 0.01*<br>
+  >*SELL when flow_total < 8*<br>
+  >*HOLD for other conditions*
+  
 
 - **Trained Model**<br>
-  *ABC*
+  *The machine learning (ML) model that was trained beforehand before applied to the backtesting library.*<br>
+  *For more details on how the ML model is built, please click [here](#Pre-trained-Model).*
   <br>
 
 ## Backtest Library
