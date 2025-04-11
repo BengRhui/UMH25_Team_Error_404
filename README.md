@@ -178,7 +178,7 @@ With the regimes labelled, we will start to train our model to predict market re
 1. Split the data into two: 70% for training and 30% for testing
 2. Apply a classification algorithm (e.g. random forest, XGBoost) to train model on prediction
 3. Evaluate the results of different models (e.g. perform cross-validation or via ROC curve)
-4. Repeat Step 2 - 3 if improvement is required (e.g. parameter hypertuning / switching to another algorithm)
+4. Repeat Step 2 - 3 if improvement is required (e.g. hyperparameter tuning / switching to another algorithm)
 
 ---
 
@@ -187,7 +187,7 @@ Another model to predict market trend is also trained via the following steps:
 - Take data from Step 3 (data categorized into intervals with labelled market regime)
 - Within each interval, split the data into two: 70% for training and 30% for testing
 - Apply a regression algorithm (e.g. polynomial regression) or time-series model (e.g. LSTM model) to train the data
-- Validate the model and perform adjustments if necessary (e.g. parameter hypertuning)
+- Validate the model and perform adjustments if necessary (e.g. hyperparameter tuning)
 
 ---
 
