@@ -137,9 +137,9 @@ A final report will be produced from the backtest library with the following det
 This section details how the machine learning model is trained before applied into the backtest library.<br>
 The flowchart below summarizes the steps taken:
 
-![Training flowchart](https://github.com/user-attachments/assets/ab37048b-f0fa-4a32-a043-0494705a62a7)
+![Training flowchart](https://github.com/user-attachments/assets/30878497-4a56-4b19-870f-eb2e833ef62b)
 
-The PDF version of the flowchart can be retrieved [here](https://github.com/user-attachments/files/19688051/How.to.train.your.model.pdf).
+The PDF version of the flowchart can be retrieved [here](https://github.com/user-attachments/files/19705840/How.to.train.your.model.pdf).
 
 ---
 
