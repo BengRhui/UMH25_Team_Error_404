@@ -73,8 +73,8 @@ To use the backtest library, we will need to provide a few inputs, including:
   
 
 - **Trained Model**<br>
-  *The machine learning (ML) model that was trained beforehand before applied to the backtesting library.<br>*
-  *For more details on how the ML model is built, please click [here](#Pre-trained-Model).*
+  *The various machine learning (ML) models that was trained beforehand before applied to the backtesting library.<br>*
+  *For more details on how the ML models are built, please click [here](#Pre-trained-Model).*
   
 
 ---
@@ -128,6 +128,7 @@ A final report will be produced from the backtest library with the following det
 - **Graphs** and charts, such as:
   - Equity curve
   - Trade signal timeline
+
 - Full list of **trade records** / transactions
 
 ---
@@ -161,14 +162,16 @@ Some of the approaches / techniques considered include using:
 ---
 
 > Note:
-> The overall idea is to have two models:
-> - One to predict market regimes (`model 1` in Step 4a)
-> - One to predict market trend (`model 2` in Step 4b)
+> The overall idea is to have three models:
+> - One to identify the market regime represented by each data interval (`model 1` in Step 3)
+> - One to predict market regimes (`model 2` in Step 4a)
+> - One to predict market trend (`model 3` in Step 4b)
 >
 > 
 > The purpose behind this is that, in the backtest library:
-> - `model 1` can first be applied to predict the market regime that might take place (whether if it's bull, bear or neutral market).
-> - Followed by `model 2` to predict the trend for each specific regime (the fluctuations, i.e. the ups and downs of the market).
+> - `model 1` can first be applied to identify the market regime represented by different intervals (whether if it's bull, bear or neutral market).
+> - `model 2` can then be used to predict the market regime that might take place.
+> - This is followed by `model 3` to predict the trend for each specific regime (the fluctuations, i.e. the ups and downs of the market).
 
 ### Step 4a: Train model on market regime prediction
 With the regimes labelled, we will start to train our model to predict market regime based on previous data. The steps involved include:
@@ -188,7 +191,7 @@ Another model to predict market trend is also trained via the following steps:
 
 ---
 
-### Step 5: Output the models for further use
+### Step 5: Validate and output the models
 With the models trained, they are outputted and saved so that it can be imported into the backtest library later.
 
 ---
