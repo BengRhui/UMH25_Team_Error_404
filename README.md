@@ -137,9 +137,10 @@ A final report will be produced from the backtest library with the following det
 This section details how the machine learning model is trained before applied into the backtest library.<br>
 The flowchart below summarizes the steps taken:
 
-![Training flowchart](https://github.com/user-attachments/assets/30878497-4a56-4b19-870f-eb2e833ef62b)
+![Training flowchart](https://github.com/user-attachments/assets/35a1644d-65a8-4841-bbea-559786942d70)
 
-The PDF version of the flowchart can be retrieved [here](https://github.com/user-attachments/files/19705840/How.to.train.your.model.pdf).
+The PDF version of the flowchart can be retrieved [here](https://github.com/user-attachments/files/19710024/How.to.train.your.model.pdf)
+
 
 ---
 
@@ -148,12 +149,7 @@ Multiple datasets from different sources (e.g. CryptoQuant, Glassnode, Coinglass
 
 ---
 
-### Step 2: Divide data equally based on time interval
-The data is divided into different time intervals (e.g. days / hours) to be used later.
-
----
-
-### Step 3: Label each interval with market regime
+### Step 2: Label each interval with market regime
 Using algorithm, we will label each divided data with a market regime (e.g. bull, bear, neutral).<br>
 Some of the approaches / techniques considered include using:
 - Clustering methods (e.g. k-means clustering)
@@ -163,9 +159,9 @@ Some of the approaches / techniques considered include using:
 
 > Note:
 > The overall idea is to have three models:
-> - One to identify the market regime represented by each data interval (`model 1` in Step 3)
-> - One to predict market regimes (`model 2` in Step 4a)
-> - One to predict market trend (`model 3` in Step 4b)
+> - One to identify the market regime represented by each data interval (`model 1` in Step 2)
+> - One to predict market regimes (`model 2` in Step 3a)
+> - One to predict market trend (`model 3` in Step 3b)
 >
 > 
 > The purpose behind this is that, in the backtest library:
@@ -173,7 +169,7 @@ Some of the approaches / techniques considered include using:
 > - `model 2` can then be used to predict the market regime that might take place.
 > - This is followed by `model 3` to predict the trend for each specific regime (the fluctuations, i.e. the ups and downs of the market).
 
-### Step 4a: Train model on market regime prediction
+### Step 3a: Train model on market regime prediction
 With the regimes labelled, we will start to train our model to predict market regime based on previous data. The steps involved include:
 1. Split the data into two: 70% for training and 30% for testing
 2. Apply a classification algorithm (e.g. random forest, XGBoost) to train model on prediction
@@ -182,7 +178,7 @@ With the regimes labelled, we will start to train our model to predict market re
 
 ---
 
-### Step 4b: Train model on market trend prediction
+### Step 3b: Train model on market trend prediction
 Another model to predict market trend is also trained via the following steps:
 - Take data from Step 3 (data categorized into intervals with labelled market regime)
 - Within each interval, split the data into two: 70% for training and 30% for testing
@@ -191,7 +187,7 @@ Another model to predict market trend is also trained via the following steps:
 
 ---
 
-### Step 5: Validate and output the models
+### Step 4: Validate and output the models
 With the models trained, they are outputted and saved so that it can be imported into the backtest library later.
 
 ---
