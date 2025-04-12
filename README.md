@@ -1,7 +1,8 @@
 # Team Error 404 (UM Hackathon 2025)
 Hi, everyone! Welcome to our group's `GitHub` repo. All our ideas, documents and code will be recorded here.
 
-**Note: The presentation slides (in both PPTX and PDF format) are located in the `Preliminary Round PPT Slides` folder.**
+**Note: The presentation slides (in both PPTX and PDF format) are located in the `Preliminary Round PPT Slides` folder.**<br>
+You may also access the presentation slides [here](/Preliminary-Round-PPT-Slides/Prelim_Slides.pptx).
 
 ---
 
